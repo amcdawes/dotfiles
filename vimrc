@@ -11,24 +11,24 @@ Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
 
-Bundle 'bling/vim-airline'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
 set laststatus=2
-let g:airline_powerline_fonts = 1
 
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'lsdr/monokai'
+Bundle 'nanotech/jellybeans.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'LaTeX-Box-Team/LaTeX-Box' 
+Bundle 'lervag/vim-latex'
 Bundle 'suan/vim-instant-markdown'
 
 filetype plugin indent on
 
 " The rest of your config follows here
 
-let mapleader = ","
+"let mapleader = ","
 
 " Spaces not tabs! 
 set tabstop=4
@@ -39,7 +39,7 @@ set expandtab
 " and transparency
 if has ('gui_running')
     highlight Pmenu guibg=#cccccc gui=bold
-    set transparency=15
+    set transparency=5
 endif
 
 colors jellybeans
@@ -47,16 +47,16 @@ colors jellybeans
 " Python-mode
 " Activate rope
 " Keys:
-" K             Show python docs
+" K     Show python docs
 "   Rope autocomplete
 " g     Rope goto definition
 " d     Rope show documentation
 " f     Rope find occurrences
 " b     Set, unset breakpoint (g:pymode_breakpoint enabled)
-" [[            Jump on previous class or function (normal, visual, operator modes)
-" ]]            Jump on next class or function (normal, visual, operator modes)
-" [M            Jump on previous class or method (normal, visual, operator modes)
-" ]M            Jump on next class or method (normal, visual, operator modes)
+" [[    Jump on previous class or function (normal, visual, operator modes)
+" ]]    Jump on next class or function (normal, visual, operator modes)
+" [M    Jump on previous class or method (normal, visual, operator modes)
+" ]M    Jump on next class or method (normal, visual, operator modes)
 let g:pymode_rope = 1
 
 let g:pymode_rope_lookup_project = 0
@@ -90,6 +90,10 @@ let g:pymode_folding = 0
 " Set the following so the command-B keys work
 let g:Tex_CompileRule_pdf='latexmk $*'
 
+" UltiSnips setup:
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Move by screen lines
 nnoremap j gj
