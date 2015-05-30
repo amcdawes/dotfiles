@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/dawes/Documents/SparkFun-Eagle-Libraries-master'
+let g:netrw_dirhist_2='/Users/dawes/Dropbox/242 Workshop 2015'
+let g:netrw_dirhist_3='/Users/dawes/Sites/doppler_files'
+let g:netrw_dirhist_4='/Users/dawes/Sites/amcdawes.github.com/making'
