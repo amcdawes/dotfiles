@@ -11,7 +11,10 @@ Bundle 'VundleVim/Vundle.vim'
 
 " The bundles you install will be listed here
 
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
 set laststatus=2
 
